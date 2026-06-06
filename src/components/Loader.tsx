@@ -6,7 +6,7 @@ export default function Loader() {
     <motion.div
       initial={{ opacity: 1 }}
       animate={{ opacity: 1 }}
-      exit={{ opacity: 0, transition: { duration: 0.6, ease: "easeInOut" } }}
+      exit={{ opacity: 0, transition: { duration: 0.25, ease: "easeInOut" } }}
       className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-charcoal text-cream overflow-hidden"
     >
       {/* Background Decorative glow assets */}
@@ -43,7 +43,7 @@ export default function Loader() {
         <motion.h1
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
+          transition={{ delay: 0.1, duration: 0.4 }}
           className="font-heading text-2xl sm:text-3xl font-extrabold tracking-[0.25em] text-[#FFD8BE]"
         >
           SK <span className="text-cream">CATTERY</span>
@@ -52,7 +52,7 @@ export default function Loader() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.8 }}
-          transition={{ delay: 0.4, duration: 0.6 }}
+          transition={{ delay: 0.2, duration: 0.4 }}
           className="flex items-center justify-center gap-1.5 mt-2 text-[10px] sm:text-xs font-semibold tracking-[0.35em] text-beige uppercase"
         >
           <Sparkles className="h-3 w-3 text-[#B68D6C] animate-pulse" />
@@ -66,7 +66,7 @@ export default function Loader() {
         <motion.div
           initial={{ width: 0 }}
           animate={{ width: "100%" }}
-          transition={{ duration: 1.2, ease: "easeInOut" }}
+          transition={{ duration: 0.45, ease: "easeInOut" }}
           className="h-full bg-gradient-to-r from-softbrown to-peach"
         />
       </div>

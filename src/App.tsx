@@ -25,7 +25,7 @@ export default function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setInitialLoading(false);
-    }, 1600);
+    }, 450);
     return () => clearTimeout(timer);
   }, []);
 
@@ -102,22 +102,26 @@ export default function App() {
     }
   }, [currentPage]);
 
-  // Premium navigation page switcher with luxury transition loader
+    // Elegant navigation page switcher with luxury transition loader
   const handlePageChange = (pageId: string) => {
     if (pageId === currentPage) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      try {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } catch (e) {
+        window.scrollTo(0, 0);
+      }
       return;
     }
 
     setTransitionLoading(true);
-    // Instant scroll to top so new page content starts at the top
-    window.scrollTo({ top: 0, behavior: "instant" });
+    // Instant scroll to top using fully-compatible traditional method to avoid iOS crash
+    window.scrollTo(0, 0);
 
     // Elegant timeout to allow loader to present beautifully
     setTimeout(() => {
       setCurrentPage(pageId);
       setTransitionLoading(false);
-    }, 900);
+    }, 250);
   };
 
   return (
