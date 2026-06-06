@@ -48,35 +48,40 @@ Please share photos of the current active litters or organize an interactive vid
           </p>
         </div>
 
-        {/* Dynamic Filter Tab Selector */}
-        <div className="flex flex-wrap justify-center gap-2.5 mb-12 pb-2">
-          {breeds.map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={`px-5 py-2.5 rounded-full font-heading text-xs sm:text-sm font-bold transition-all relative ${
-                activeTab === tab
-                  ? "text-cream bg-softbrown shadow-md shadow-softbrown/10"
-                  : "text-charcoal/80 bg-cream/60 border border-beige hover:border-softbrown/40"
-              }`}
-              id={`filter-tab-${tab.replace(/\s+/g, "-")}`}
-            >
-              {tab === "All" && "🐾 "}
-              {tab === "Persian" && "🐱 "}
-              {tab === "Himalayan" && "❄️ "}
-              {tab === "British Shorthair" && "🇬🇧 "}
-              {tab === "Ragdoll" && "🧸 "}
-              {tab === "Maine Coon" && "🦁 "}
-              {tab} Breeds
-              {activeTab === tab && (
-                <motion.div
-                  layoutId="activeFilterBg"
-                  className="absolute inset-0 bg-softbrown rounded-full -z-10"
-                  transition={{ duration: 0.2 }}
-                />
-              )}
-            </button>
-          ))}
+        {/* Dynamic Filter Tab Selector - Horizontal swipable on mobile, centered grid on desktop */}
+        <div className="mb-14 text-center">
+          <p className="text-[11px] uppercase font-bold tracking-widest text-charcoal/50 mb-3 block md:hidden">
+            ← Swipe left or right to filter breeds →
+          </p>
+          <div className="flex overflow-x-auto snap-x snap-mandatory no-scrollbar gap-2.5 max-w-full px-4 pb-4 select-none -mx-4 md:mx-0 md:flex-wrap md:justify-center md:overflow-visible md:px-0">
+            {breeds.map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={`snap-center shrink-0 px-5 py-2.5 rounded-full font-heading text-xs sm:text-sm font-bold transition-all relative cursor-pointer ${
+                  activeTab === tab
+                    ? "text-cream bg-softbrown shadow-lg shadow-softbrown/15"
+                    : "text-charcoal/80 bg-cream/80 border border-beige/60 hover:border-softbrown/40"
+                }`}
+                id={`filter-tab-${tab.replace(/\s+/g, "-")}`}
+              >
+                {tab === "All" && "🐾 "}
+                {tab === "Persian" && "🐱 "}
+                {tab === "Himalayan" && "❄️ "}
+                {tab === "British Shorthair" && "🇬🇧 "}
+                {tab === "Ragdoll" && "🧸 "}
+                {tab === "Maine Coon" && "🦁 "}
+                {tab} Breeds
+                {activeTab === tab && (
+                  <motion.div
+                    layoutId="activeFilterBg"
+                    className="absolute inset-0 bg-softbrown rounded-full -z-10"
+                    transition={{ duration: 0.2 }}
+                  />
+                )}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Kitten Breeds Grid */}

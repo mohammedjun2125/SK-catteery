@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MapPin, Phone, Clock, Send, MessageCircle, CheckCircle2, ChevronDown, User, Mail, Sparkles } from "lucide-react";
+import { MapPin, Phone, Clock, Send, MessageCircle, CheckCircle2, ChevronDown, User, Mail, Sparkles, Navigation } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
 export default function ContactForm() {
@@ -126,18 +126,45 @@ Message: ${formData.message}`;
 
             </div>
 
-            {/* Google Maps Embed iframe */}
-            <div className="mt-10 rounded-[24px] overflow-hidden shadow-[0_4px_15px_rgba(0,0,0,0.02)] border border-[#FFD8BE]/70 aspect-[16/10] bg-beige/10">
-              <iframe
-                title="Google Maps Location for SK Cattery"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15223.11186716037!2d78.3470659!3d17.4703957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93a110a202d5%3A0xe51a700d9796e676!2sSK%20Cattery%20-%20Persian%20%26%20Himalayan%20Kittens!5e0!3m2!1sen!2sin!4v1717652758252!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen={false}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+            {/* Google Maps Embed iframe with Premium Directions HUD overlay */}
+            <div className="mt-10 rounded-[28px] overflow-hidden shadow-[0_12px_36px_rgba(182,141,108,0.12)] border border-[#FFD8BE]/80 bg-beige/10 relative group">
+              <div className="aspect-[16/10] w-full">
+                <iframe
+                  title="Google Maps Location for SK Cattery"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15223.11186716037!2d78.3470659!3d17.4703957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93a110a202d5%3A0xe51a700d9796e676!2sSK%20Cattery%20-%20Persian%20%26%20Himalayan%20Kittens!5e0!3m2!1sen!2sin!4v1717652758252!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={false}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+
+              {/* Luxury Floating HUD with GPS Metadata & Get Directions Action */}
+              <div className="absolute inset-x-4 bottom-4 bg-[#120F0D]/95 backdrop-blur-md rounded-2xl p-4 border border-[#FFD8BE]/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-2xl transition-all group-hover:scale-[1.01]">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
+                    <span className="text-[10px] uppercase font-bold text-[#FFD8BE]/80 tracking-widest">Live Cattery Location</span>
+                  </div>
+                  <h5 className="font-heading text-sm font-bold text-white mt-1">SK Cattery Headquarters</h5>
+                  <p className="text-[11px] text-cream/70 font-mono mt-0.5">
+                    Hafeezpet • 17.4770° N, 78.3614° E
+                  </p>
+                </div>
+
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=17.4770,78.3614"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto bg-softbrown text-cream hover:bg-white hover:text-charcoal px-4 py-2.5 rounded-xl font-heading text-xs font-black tracking-wide flex items-center justify-center gap-2 shadow-lg transition-all duration-300 active:scale-95 cursor-pointer shrink-0"
+                  id="get-directions-btn"
+                >
+                  <Navigation className="h-3.5 w-3.5 fill-current rotate-45" />
+                  Get Directions
+                </a>
+              </div>
             </div>
           </div>
 
