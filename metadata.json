@@ -1,0 +1,6 @@
+{
+  "name": "SK Cattery",
+  "description": "Premium Persian & Himalayan Kittens for sale in Hyderabad. Healthy, vaccinated kittens with home delivery, pet care support, and WhatsApp inquiries.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
