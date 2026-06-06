@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Check, ShieldCheck, HeartPulse, Sparkles } from "lucide-react";
+import catteryRoom from "../assets/images/cattery_room_1780744957819.png";
 
 export default function About() {
   const points = [
@@ -40,7 +41,7 @@ export default function About() {
               {/* Playroom Environment Display */}
               <div className="rounded-[24px] overflow-hidden shadow-[0_4px_15px_rgba(0,0,0,0.02)] border border-[#FFD8BE]/75">
                 <img
-                  src="/src/assets/images/cattery_room_1780744957819.png"
+                  src={catteryRoom}
                   alt="SK Cattery clean playroom and climbing space"
                   className="w-full aspect-[4/3] object-cover transition-transform duration-500 hover:scale-[1.03]"
                   referrerPolicy="no-referrer"

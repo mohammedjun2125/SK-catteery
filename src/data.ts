@@ -1,4 +1,7 @@
 import { Kitten, Review, FAQ, GalleryItem, ServiceItem, BreedProfile } from "./types";
+import persianImg from "./assets/images/persian_kitten_1780744925029.png";
+import himalayanImg from "./assets/images/himalayan_kitten_1780744940674.png";
+import catteryRoomImg from "./assets/images/cattery_room_1780744957819.png";
 
 export const KITTENS_DATA: Kitten[] = [
   {
@@ -10,7 +13,7 @@ export const KITTENS_DATA: Kitten[] = [
     color: "Pure White, Royal Golden, Silver Shaded & Calico",
     vaccinationStatus: "1st Dose Done & De-wormed",
     availability: "Available Litters",
-    image: "/src/assets/images/persian_kitten_1780744925029.png",
+    image: persianImg,
     features: ["Pristine Triple Coat", "Cute Flat Muzzle Profile", "Expressive Copper Eyes", "Ultra-Docile Temperament"],
     description: "Our Traditional Persian line is Hyderabad's absolute gold standard. These sweet baby kittens are quiet, extraordinarily affectionate, and raised entirely cage-free in friendly air-conditioned nurseries. Fully litter-trained and verified healthy.",
     temperament: "Serene, quiet, incredibly sweet, and loves being cuddled on laps. They thrive in calm household environments.",
@@ -25,7 +28,7 @@ export const KITTENS_DATA: Kitten[] = [
     color: "Seal Point, Blue Point & Flame Point",
     vaccinationStatus: "Fully Vaccinated Option",
     availability: "Reservation Open",
-    image: "/src/assets/images/himalayan_kitten_1780744940674.png",
+    image: himalayanImg,
     features: ["Sapphire Blue Eyes", "Distinctive Deep Points", "Plush Double Coat", "Champion Sired Lines"],
     description: "An elite cross combining the luxurious coat of the Persian with the spectacular point colors and sapphire gaze of Siamese bloodlines. Highly interactive, soft-voiced, and loves lap cuddling.",
     temperament: "Very playful, friendly, loyal, and highly expressive. They communicate with gentle, soft chirps.",
@@ -184,21 +187,21 @@ export const GALLERY_DATA: GalleryItem[] = [
   {
     id: "g-1",
     category: "Kittens",
-    imageUrl: "/src/assets/images/persian_kitten_1780744925029.png",
+    imageUrl: persianImg,
     title: "Playful Persian Doll",
     description: "Cute kitten interacting with toys in our play area"
   },
   {
     id: "g-2",
     category: "Kittens",
-    imageUrl: "/src/assets/images/himalayan_kitten_1780744940674.png",
+    imageUrl: himalayanImg,
     title: "Sapphire blue-eyed Himalayan",
     description: "Our signature high-contrast seal-point coloration"
   },
   {
     id: "g-3",
     category: "Facility",
-    imageUrl: "/src/assets/images/cattery_room_1780744957819.png",
+    imageUrl: catteryRoomImg,
     title: "SK Play Haven",
     description: "Spacious, air-conditioned cage-free climbing room"
   },
@@ -276,7 +279,7 @@ export const BREED_PROFILES: BreedProfile[] = [
     temperament: "Remarkably affectionate, graceful, calm, and highly content with indoor domestic living.",
     traits: ["Luxurious Triple Coat", "Fluffy Muzzle / Punch Face", "Warm Expressive Eyes", "Gentle Quiet Voices"],
     careRequirement: "Requires daily combing to prevent matting, a high-protein raw/dry meal diet, and loving eye-wipes.",
-    image: "/src/assets/images/persian_kitten_1780744925029.png"
+    image: persianImg
   },
   {
     id: "br-2",
@@ -285,7 +288,7 @@ export const BREED_PROFILES: BreedProfile[] = [
     temperament: "Extremely serene, intelligent, interactive with caregivers, and pleasantly playful.",
     traits: ["Stunning Sapphire Eyes", "Sleek Dark Color Points", "Sturdy Rounded Bodyset", "highly Social Personality"],
     careRequirement: "Regular coating brushing, occasional baths, and quality scratching posts to burn playful energy.",
-    image: "/src/assets/images/himalayan_kitten_1780744940674.png"
+    image: himalayanImg
   }
 ];
 

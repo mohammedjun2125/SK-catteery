@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { MessageCircle, ArrowRight } from "lucide-react";
+import heroCat from "../assets/images/hero_cat_1780744909349.png";
 
 interface HeroProps {
   onExploreClick: () => void;
@@ -167,7 +168,7 @@ export default function Hero({ onExploreClick }: HeroProps) {
             {/* Main Cut Kitten Image with luxury scroll parallax */}
             <div className="relative w-full h-full min-h-[320px] overflow-hidden rounded-[18px] bg-white group border border-[#FFD8BE]/20 flex items-center">
               <img
-                src="/src/assets/images/hero_cat_1780744909349.png"
+                src={heroCat}
                 alt="Healthy adorable white Persian kitten"
                 className="w-full h-full object-cover transition-transform duration-[300ms] ease-out group-hover:scale-105"
                 referrerPolicy="no-referrer"
